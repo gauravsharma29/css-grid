@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Justify-content and align-content</title>
+    <link href="style.css" rel="stylesheet" />
+    <style>
+      body {
+        height: 500px;
+      }
+      .container {
+        border: 1px solid black;
+        height: 100%;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(2, 100px);
+        /* this works horizontally */
+        justify-content: center;
+         /* this works vertically */
+         align-content: center;
+
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+  </body>
+</html>

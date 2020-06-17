@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Justify-items and align-items</title>
+    <link href="style.css" rel="stylesheet" />
+    <style>
+        body {
+            height: 500px;
+        }
+        .container {
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 40px auto 40px;
+            grid-gap: 3px;
+            /* this works horizontally  stretch default*/
+            /* justify-items: stretch; */
+            /* this works vertically */
+            /* align-items: center; */
+        }
+
+        .header {
+            grid-column: 1 / -1;
+        }
+
+        .menu {
+            grid-column: 1 / 3;
+        }
+
+        .content {
+            grid-column: 3 / -1;
+            /* this works horizontally */
+            justify-self: center;
+            /* this works vertically */
+            align-self: center;
+        }
+
+        .footer {
+            grid-column: 1 / -1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">HEADER</div>
+        <div class="menu">MENU</div>
+        <div class="content">CONTENT</div>
+        <div class="footer">FOOTER</div>
+    </div>
+</body>
+
+</html>

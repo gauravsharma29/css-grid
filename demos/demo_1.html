@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout</title>
+    <link href="../section 1/style.css" rel="stylesheet" />
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 40px 400px 40px;
+        grid-gap: 3px;
+      }
+
+      .header {
+        grid-column: 1 / -1;
+      }
+
+      /* whenever we need to push the columns use like this below in menu ans content */
+      .menu {
+        /* we can use single value when you want to start your column and the width/height is according to grid defined */
+        grid-column: 12;
+        grid-row: 2;
+        /* we can also use grid-area: row-start / column-start / row-end / column-end  */
+      }
+
+      .content {
+        grid-column: 1 / 12;
+      }
+
+      .footer {
+        grid-column: 1 / -1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">HEADER</div>
+      <div class="menu">MENU</div>
+      <div class="content">CONTENT</div>
+      <div class="footer">FOOTER</div>
+    </div>
+  </body>
+</html>

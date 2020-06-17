@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template areas</title>
+    <link href="style.css" rel="stylesheet" />
+    <style>
+      body {
+        height: 100vh;
+      }
+      .container {
+        height: 100%;
+        display: grid;
+        grid-gap: 3px;
+        grid-template-columns: repeat(12, 1fr);
+        /* auto means it covers all available height with set height property to 100% */
+        grid-template-rows: 40px auto 40px;
+        /* here we visually defines the column names with number of rows we have in the container*/
+        /* DOT is used to blank that space */
+        grid-template-areas:
+          ". h h h h h h h h h h h "
+          "c c c c c c c c c c c m"
+          ". f f f f f f f f f f f";
+      }
+
+      .header {
+        grid-area: h;
+      }
+
+      .menu {
+        grid-area: m;
+      }
+
+      .content {
+        grid-area: c;
+      }
+
+      .footer {
+        grid-area: f;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">HEADER</div>
+      <div class="menu">MENU</div>
+      <div class="content">CONTENT</div>
+      <div class="footer">FOOTER</div>
+    </div>
+  </body>
+</html>

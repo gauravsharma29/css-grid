@@ -1,0 +1,11 @@
+.container div:nth-of-type(odd) {
+  background-color: #58cea6;
+}
+
+.container div {
+  color: white;
+}
+
+.container div:nth-of-type(even) {
+  background-color: #ff946d;
+}
